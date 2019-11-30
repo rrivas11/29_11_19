@@ -1,0 +1,28 @@
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/postgres?currentSchema=math_operator
+    username: postgres
+    password: Bengine
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    show-sql: true
+appProperties:
+  code:
+    c200: "200"
+    c401: "401"
+    c400: "400"
+    c404: "404"
+    c409: "409"
+  messages:
+    mjs1: "Se produjo un error"
+
+config:
+  endpoints:
+    math:
+      process: ConvertProcess
+      postfix: PostfixConvertion
+      operator : OperatorDB
+
+
+
